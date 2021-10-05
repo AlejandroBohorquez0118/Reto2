@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Cliente Ajax</title>
+        
+        <meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="js/funcionesMedico.js"></script>
+    </head>
+    <body>
+
+
+        
+        <li role="presentation" data-id="0" data-toggle="tooltip" title="" class="" data-original-title="Medico">
+            <a href="./crudMedico.html">Opcion <span>Medicos</span></a></li>
+        <li role="presentation" data-id="1" data-toggle="tooltip" title="" data-original-title="Stape" class="Cliente">
+            <a href="./crudCliente.html">Opción <span>Cliente</span></a></li>
+        <li role="presentation" data-id="2" data-toggle="tooltip" title="" data-original-title="Mensaje">
+            <a href="./crudMensaje.html">Opción <span>Mensaje</span></a></li>
+
+
+        <h2>Cliente Ajax Ingreso de Medicos </h2>
+        <fieldset style="width: 40%">
+            <legend>Datos del Doctor</legend>
+            <table>
+               <tr>
+                   <th>Id:</th>
+                   <td><input type="number" id="id"> </td>
+               </tr>
+
+               <tr>
+                   <th>Specialty:</th>
+                   <td><input type="text" id="specialty"> </td>
+               </tr> 
+               <tr>
+                    <th>Graduate Year:</th>
+                    <td><input type="number" id="graduate_year"> </td>
+                </tr> 
+                <tr>
+                    <th>Departament Id:</th>
+                    <td><input type="number" id="department_id"> </td>
+                </tr> 
+                <tr>
+                    <th>Name:</th>
+                    <td><input type="TEXT" id="name"> </td>
+                </tr> 
+                 
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="GUARDAR" onclick="guardar()"> &nbsp;&nbsp;&nbsp;
+                        <input type="button" value="EDITAR" onclick="editar()"> &nbsp;&nbsp;&nbsp;
+                        
+                    </td>
+                </tr> 
+                
+            </table>
+        </fieldset>
+
+        <h2>Consultas </h2>
+        <hr>
+        <span style="color: blue;"><b>Busqueda por ID</b></span>
+        <input type="text"  id="id">
+        <div id="resultados"></div>
+        <button onclick="consultar()">MOSTRAR TODO</button>
+        &nbsp;&nbsp;&nbsp;
+        <button onclick="buscarPorID($('#id2'))">MOSTAR UNO</button>
+</body>
+</html>
