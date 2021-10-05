@@ -143,8 +143,10 @@ function eliminar(idElemento){
 }
 
 function buscarPorID(idItem){
+
+    var id = idItem 
     $.ajax({    
-        url : 'https://ga9c9b6eca3f530-db202109271959.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/doctor/doctor/'+idItem.val(),
+        url : 'https://ga9c9b6eca3f530-db202109271959.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/doctor/doctor/'+id.val(),
         type : 'GET',
         dataType : 'json',        
 
