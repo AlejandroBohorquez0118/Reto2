@@ -5,9 +5,7 @@ function consultar(){
             type : 'GET',
             dataType : 'json',
             
-            error : function(xhr, status) {
-                alert('ha sucedido un problema, '+xhr.status);
-            },
+            
             complete : function(xhr, status) {
                 alert('Petición realizada, '+xhr.status);
             },
@@ -49,10 +47,7 @@ $.ajax({
 
             console.log(json);
     },
-    error : function(xhr, status) {
-        alert('ha sucedido un problema'+ xhr.status);
-        
-    },
+    
     complete : function(xhr, status) {
         alert('Petición realizada '+xhr.status);
         limpiarFormulario();
@@ -92,10 +87,7 @@ function editar(idElemento,nameElemento,emailElemento,ageElemento){
          
                 console.log(json);
         },
-        error : function(xhr, status) {
-            alert('ha sucedido un problema'+ xhr.status);
-           
-        },
+        
         complete : function(xhr, status) {
             alert('Petición realizada '+xhr.status);
             limpiarFormulario();
@@ -125,10 +117,7 @@ function eliminar(idElemento){
           
                 console.log(json);
         },
-        error : function(xhr, status) {
-            alert('ha sucedido un problema'+ xhr.status);
-            
-        },
+        
         complete : function(xhr, status) {
             alert('Petición realizada '+xhr.status);
             limpiarFormulario();
@@ -163,9 +152,7 @@ function buscarPorID(idItem){
             
 
     },
-    error : function(xhr, status) {
-        alert('ha sucedido un problema'+ xhr.status);
-    },
+    
     complete : function(xhr, status) {
         alert('Petición realizada '+xhr.status);
     }
